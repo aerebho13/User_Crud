@@ -57,10 +57,25 @@ def update(pk, user_data):
         UPDATE user
         SET first_name=?,
         last_name=?,
-        hobbies=?,
+        hobbies=?
         WHERE id=?
     """
     cursor = get_db()
     cursor.execute(statement, value_tuple)
     cursor.commit()
     cursor.close()
+
+
+def deactivate(pk):
+    cursor = get_db()
+    statement = """
+        first_name=?,
+        last_name=?,
+        hobbies=?,  
+    """
+    cursor = get_db()
+    cursor.execute(statement, (pk))
+    cursor.commit()
+    cursor.close()
+
+
