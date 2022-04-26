@@ -76,7 +76,7 @@ def get_all_vehicles():
 
 @app.get("/vehicles/<int:pk>/")
 def get_vehicle_by_id(pk):
-    target_user = user.select_by_id(pk)
+    target_vehicle = user.select_by_id(pk)
     resp = {
         "status": "ok",
         "message": "success",

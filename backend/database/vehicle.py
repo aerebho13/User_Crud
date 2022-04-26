@@ -13,7 +13,7 @@ def output_formatter(results):
             "active": result[4],
         }
         out.append(result_dict)
-        return out
+    return out
 
 def insert(vehicle_dict):
     value_tuple = (
